@@ -4,8 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GBJ | Home</title>
     <!-- HTMX and templeting extention -->
+    <!-- <script src="../htmx.org@1.9.10"></script> -->
     <script src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous">
     </script>
@@ -13,19 +14,11 @@
     <!-- <script src="https://unpkg.com/mustache@latest"></script> -->
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="components/custom.js"></script>
   </head>
 
   <body>
-    <div class="flex justify-between m-5">
-      <h1 class="text-3xl font-bold">GoBeyondJS</h1>
-      <nav id="navbar">
-        <ul class="flex space-x-2">
-          <li class="hover:underline rounded-md"><a href="/">Home</a></li>
-          <li class="hover:underline rounded-md"><a href="/login">Login</a></li>
-          <li class="hover:underline rounded-md"><a href="#">menu 3</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav-bar></nav-bar>
   </body>
 
 </html>

@@ -10,3 +10,8 @@ A journey to find a replacement to Javascript libraries in modern web developmen
     - [x] Vanilla JS
     - [ ] Lit
 - [ ] Docker
+
+## Todo
+- [ ] Find a solution for web components
+- [ ] Showcase all HTMX feature
+- [ ] Showcase all Echo library feature
