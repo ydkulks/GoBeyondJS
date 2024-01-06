@@ -50,3 +50,8 @@ class Footer extends HTMLElement{
 }
 
 customElements.define('footer-section', Footer);
+
+const currentCount = () => {
+  var count = document.getElementById("count").innerText;
+  return count
+}
