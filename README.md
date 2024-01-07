@@ -2,11 +2,11 @@
 A journey to find a replacement to Javascript libraries in modern web development
 
 ## Things to learn:
-- [x] HTMX
-    - Client-side-templates (HTMX extension)
-- [ ] Go Web Framework
-    - Echo library
-- [ ] Web Components (Non framework)
+- [ ] HTMX
+- Go Web Framework
+    - [ ] Echo library
+    - [ ] Go templates
+- Web Components (Non framework)
     - [x] Vanilla JS
     - [ ] Lit
 - [ ] Docker

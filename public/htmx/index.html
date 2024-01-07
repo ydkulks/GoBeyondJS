@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBJ | HTMX</title>
+
+    <!-- HTMX and templeting extention -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script> -->
+    <!-- <script src="https://unpkg.com/mustache@latest"></script> -->
+
+    <!-- Prismjs Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-atom-dark.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/toolbar/prism-toolbar.css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../components/custom.js"></script>
+    <link rel="stylesheet" href="../components/style.css">
+  </head>
+
+  <body>
+    <nav-bar></nav-bar>
+    <div class="flex justify-center">
+      <div style="max-width: 90%;">
+
+        <h2 class="text-3xl">HTMX</h2>
+        <p>
+        <a class="underline hover:text-blue-600" href="https://htmx.org">htmx</a> 
+        is a library that allows you to access modern browser features 
+        directly from HTML, rather than using javascript.
+        </p>
+        <br><hr><br>
+
+        <!-- Installation process -->
+        <h3 class="text-2xl">HTMX Installation</h3>
+        <h4 class="text-1xl">CDN</h4>
+        <pre><code class="language-html" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">
+&lt;script src="https://unpkg.com/htmx.org@1.9.10"
+integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+
+        <h4 class="text-1xl">Download a copy</h4>
+        <pre><code class="language-html" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">
+&lt;!-- https://unpkg.com/htmx.org/dist/htmx.min.js --&gt;
+&lt;script src="path/to/htmx.min.js"&gt;&lt;/script&gt;
+        </code></pre>
+        <br><hr><br>
+
+        <!-- Types of requests using HTMX -->
+        <h3 class="text-2xl">HTMX AJAX Demo</h3>
+        <p>Click on these buttons to issue different requests to the server:</p>
+        <button class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700" hx-target="#ajax-response"
+          hx-get="/api/hx-ajax">hx-get</button>
+        <button class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700" hx-target="#ajax-response"
+          hx-post="/api/hx-ajax">hx-post</button>
+        <button class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700" hx-target="#ajax-response"
+          hx-put="/api/hx-ajax">hx-put</button>
+        <button class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700" hx-target="#ajax-response"
+          hx-patch="/api/hx-ajax">hx-patch</button>
+        <button class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700" hx-target="#ajax-response"
+          hx-delete="/api/hx-ajax">hx-delete</button>
+        <div id="ajax-response">[ Response ]</div>
+        <br><hr><br>
+
+        <!-- Counter Demo with hx-vals -->
+        <h3 class="text-2xl">Ajax Counter Demo</h3>
+        <p>An AJAX counter demo to showcase the ability to update UI without reloading the entire page</p>
+        <button hx-get="/api/counter" hx-target="#count" hx-vals='js:{count: currentCount(), operation: "plus"}'
+          class="text-slate-100 text-1xl bg-green-400 hover:bg-green-500 px-3 py-1 mb-5 mt-5 rounded-md">
+          Like
+        </button>
+        <span id="count">0</span>
+        <button hx-get="/api/counter" hx-target="#count" hx-vals='js:{count: currentCount(), operation: "minus"}'
+          class="text-slate-100 text-1xl bg-red-400 hover:bg-red-500 px-3 py-1 mb-5 mt-5 rounded-md">
+          Dislike
+        </button>
+        <br><hr><br>
+
+      </div>
+    </div>
+  </body>
+  <!-- Prism JS -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+</html>

@@ -10,7 +10,8 @@ import (
 func main() {
   e := echo.New()
   e.Static("/", "./public")
-  e.Static("/login", "./public/login")
+  e.Static("/htmx", "./public/htmx")
+  e.Static("/go", "./public/go")
 
   // AJAX endpoints
   e.GET("/api/hx-ajax", func(c echo.Context) error {
