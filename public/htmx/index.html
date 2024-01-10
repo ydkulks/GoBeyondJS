@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBJ | HTMX</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../components/custom.js"></script>
+    <script src="../assets/tailwind.js"></script>
+    <script src="../assets/htmx.min.js"></script>
+    <script src="../components/script.js"></script>
     <link rel="stylesheet" href="../components/style.css">
   </head>
 
   <body>
     <script>prismJS();</script>
     <nav-bar></nav-bar>
+    <!-- <div hx-get="/api/template/nav" hx-trigger="load once" hx-target="this"></div> -->
+
     <div class="flex justify-center">
       <div style="max-width: 90%;">
 
@@ -67,6 +70,16 @@ crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
           class="text-slate-100 text-1xl bg-red-400 hover:bg-red-500 px-3 py-1 mb-5 mt-5 rounded-md">
           Dislike
         </button>
+        <br><hr><br>
+
+        <!-- Go template -->
+        <h3 class="text-2xl">Go template Demo</h3>
+        <button hx-get="/api/template/hello" hx-target="#goTemp"
+          class="text-slate-100 rounded-md px-3 py-1 bg-slate-600 hover:bg-slate-700">
+          Run
+        </button>
+        <!-- <input type="text"/ > -->
+        <div id="goTemp">-- Go template placeholder --</div>
         <br><hr><br>
 
       </div>

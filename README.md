@@ -1,17 +1,19 @@
 <h1 align="center">GoBeyondJS</h1>
-A journey to find a replacement to Javascript libraries in modern web development
+<p align="center">A journey to find a replacement to Javascript libraries in modern web development</p>
 
 ## Things to learn:
-- [ ] HTMX
-- Go Web Framework
-    - [ ] Echo library
-    - [ ] Go templates
-- Web Components (Non framework)
+- [x] [HTMX](https://htmx.org)
+- Go server and templates
+    - [x] [Echo library](https://echo.labstack.com/docs/quick-start)
+    - [x] Go templates
+        - [YouTube](https://www.youtube.com/watch?v=k5wJv4XO7a0)
+        - [Echo templates](https://echo.labstack.com/docs/templates)
+- Client side Web Components (Non framework)
     - [x] Vanilla JS
-    - [ ] Lit
-- [ ] Docker
+      - [YouTube](https://www.youtube.com/watch?v=j0qG-afD244&t=600s)
+      - [freecodecamp](https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/)
+    - [x] Client-side-templates (htmx extension)
 
-## Todo
-- [ ] Find a solution for web components
-- [ ] Showcase all HTMX feature
-- [ ] Showcase all Echo library feature
+## TODO
+- [ ] Fix nav template glitches
+- [ ] Backend heavy frontend (no serving static page)

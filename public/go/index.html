@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBJ | Go</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../components/custom.js"></script>
+    <script src="../assets/tailwind.js"></script>
+    <script src="../assets/htmx.min.js"></script>
+    <script src="../components/script.js"></script>
     <link rel="stylesheet" href="../components/style.css">
   </head>
 
   <body>
     <nav-bar></nav-bar>
+    <!-- <div hx-get="/api/template/nav" hx-trigger="load once" hx-target="this"></div> -->
     <div class="flex justify-center">
       <div style="max-width: 90%;">
         <h2 class="text-2xl">Golang</h2>

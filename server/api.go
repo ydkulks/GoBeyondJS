@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
   "net/http"
@@ -7,12 +7,7 @@ import (
   "github.com/labstack/echo/v4"
 )
 
-func main() {
-  e := echo.New()
-  e.Static("/", "./public")
-  e.Static("/htmx", "./public/htmx")
-  e.Static("/go", "./public/go")
-
+func Api_endpoints(e *echo.Echo) {
   // AJAX endpoints
   e.GET("/api/hx-ajax", func(c echo.Context) error {
     return c.String(http.StatusOK, "Issued a GET request!")
@@ -38,11 +33,11 @@ func main() {
   e.GET("/api/counter", func(c echo.Context) error {
     value := c.QueryParam("count")
     operation := c.QueryParam("operation")
-    if operation == "plus"{
+    if operation == "plus" {
       temp, _ := strconv.Atoi(value)
       temp += 1
       value = strconv.Itoa(temp)
-    }else if operation == "minus"{
+    } else if operation == "minus" {
       temp, _ := strconv.Atoi(value)
       temp -= 1
       value = strconv.Itoa(temp)
@@ -50,5 +45,11 @@ func main() {
     return c.String(http.StatusOK, value)
   })
 
-  e.Logger.Fatal(e.Start(":8080"))
+  // Templates
+  e.GET("/api/template/hello", func(c echo.Context) error {
+    data := map[string]interface{}{
+      "name": "User",
+    }
+    return c.Render(http.StatusOK, "hello.html",data)
+  })
 }
