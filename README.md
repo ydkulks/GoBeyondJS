@@ -15,5 +15,4 @@
     - [x] Client-side-templates (htmx extension)
 
 ## TODO
-- [ ] Fix nav template glitches
-- [ ] Backend heavy frontend (no serving static page)
+- [x] Implement Tailwind CLI

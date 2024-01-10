@@ -1,10 +1,11 @@
 package server
 
 import (
-  "net/http"
-  "strconv"
+	"net/http"
+	"strconv"
+	"time"
 
-  "github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4"
 )
 
 func Api_endpoints(e *echo.Echo) {
@@ -51,5 +52,13 @@ func Api_endpoints(e *echo.Echo) {
       "name": "User",
     }
     return c.Render(http.StatusOK, "hello.html",data)
+  })
+
+  e.GET("/api/table", func(c echo.Context) error {
+    data := map[string]interface{}{
+      "name": "User",
+    }
+    time.Sleep(5*time.Second)
+    return c.Render(http.StatusOK, "table.html",data)
   })
 }
