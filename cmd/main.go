@@ -10,6 +10,7 @@ func main() {
   e := echo.New()
 
   e.Use(middleware.CORS())
+  e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(1)))
 
   server.Api_endpoints(e)
   server.Templates(e)

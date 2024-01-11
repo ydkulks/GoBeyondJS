@@ -54,11 +54,15 @@ func Api_endpoints(e *echo.Echo) {
     return c.Render(http.StatusOK, "hello.html",data)
   })
 
-  e.GET("/api/table", func(c echo.Context) error {
+  e.GET("/api/post", func(c echo.Context) error {
+    // get random tweet from api
+    tweet := "nested ternaries are bad and you should feel bad using them"
     data := map[string]interface{}{
-      "name": "User",
+      "name": "ThePrimeagen",
+      "username": "@" + "ThePrimeagen",
+      "tweet": tweet,
     }
-    time.Sleep(5*time.Second)
-    return c.Render(http.StatusOK, "table.html",data)
+    time.Sleep(3*time.Second)
+    return c.Render(http.StatusOK, "post.html",data)
   })
 }

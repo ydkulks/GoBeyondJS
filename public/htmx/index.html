@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBJ | HTMX</title>
-    <script src="../assets/htmx.min.js"></script>
     <script src="../components/script.js"></script>
     <link rel="stylesheet" href="../components/style.css">
+    <script src="../htmx.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../output.css">
   </head>
 
@@ -71,28 +72,16 @@ crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
         </button>
         <br><hr><br>
 
+        <!-- Pooling -->
+        <h3 class="text-2xl">Pooling request Demo</h3>
+
         <!-- Infinite scrolling -->
         <h3 class="text-2xl">Infinite scrolling Demo</h3>
         <p>The infinite scroll pattern provides a way to load content dynamically on user scrolling action.</p>
-        <table>
-          <thead class="text-2xl font-bold">
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-              <th>Column 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr hx-get="http://localhost:8080/api/table" 
-              hx-indicator="#loading"
-              hx-swap="afterend" 
-              hx-trigger="revealed">
-              <td>TestData</td>
-              <td>TestData</td>
-              <td>TestData</td>
-            </tr>
-          </tbody>
-        </table>
+        <div hx-get="http://localhost:8080/api/post" 
+          hx-indicator="#loading"
+          hx-swap="afterend" 
+          hx-trigger="revealed"></div>
         <p id="loading" class="htmx-indicator">Loading...</p>
         <br><hr><br>
 
