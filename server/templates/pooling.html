@@ -1,0 +1,5 @@
+<div hx-get="http://localhost:8080/api/pooling" hx-trigger="every 5s">
+  {{ $progress := index . "progress"}}
+  <p class="text-green-500 font-bold text-1xl">{{ $progress }}%</p>
+  <div class="h-1 bg-green-500 rounded-lg" style="width: {{ $progress }}%;"></div>
+</div>

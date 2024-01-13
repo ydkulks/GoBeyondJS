@@ -7,7 +7,8 @@
     - [x] [Echo library](https://echo.labstack.com/docs/quick-start)
     - [x] Go templates
         - [YouTube](https://www.youtube.com/watch?v=k5wJv4XO7a0)
-        - [Echo templates](https://echo.labstack.com/docs/templates)
+        - [Echo templates renderer](https://echo.labstack.com/docs/templates)
+        - [Go templating](https://pkg.go.dev/text/template)
 - Client side Web Components (Non framework)
     - [x] Vanilla JS
       - [YouTube](https://www.youtube.com/watch?v=j0qG-afD244&t=600s)

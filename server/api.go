@@ -1,6 +1,7 @@
 package server
 
 import (
+	"math/rand"
 	"net/http"
 	"strconv"
 	"time"
@@ -65,4 +66,22 @@ func Api_endpoints(e *echo.Echo) {
     time.Sleep(3*time.Second)
     return c.Render(http.StatusOK, "post.html",data)
   })
+
+  var current_state = 0
+  e.GET("/api/pooling", func(c echo.Context) error {
+    current_state = progress_me_daddy(current_state)
+    data := map[string]interface{}{
+      "progress": current_state,
+    }
+    if current_state > 100 {
+      current_state = 0
+      return c.String(286,`<p>Completed!</p>`)
+    }
+    return c.Render(http.StatusOK, "pooling.html",data)
+  })
+}
+
+func progress_me_daddy(prev int) int{
+  var rand = rand.Intn(10) + 1
+  return prev + rand
 }
