@@ -14,3 +14,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #b1b4b8;
 }
+
+code[class*="language-"], pre[class*="language-"] {
+  line-height: 1;
+}

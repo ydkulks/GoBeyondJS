@@ -54,24 +54,24 @@ const htmxTemplates = async () => {
   });
 };
 
-const prismJS = async () => {
+const prismJS = () => {
   loadStyle('https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-atom-dark.css', () => {
     // console.log("prism-atom-dark.css loaded");
   });
   loadStyle('https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/toolbar/prism-toolbar.css', () => {
     // console.log("prism-toolbar.css loaded");
+    loadScript('https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/toolbar/prism-toolbar.min.js', () => {
+      // console.log("prism-toolbar.min.js loaded");
+      loadScript('https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js', () => {
+        // console.log("prism-copy-to-clipboard.min.js loaded");
+      });
+    });
   });
   loadScript('https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.min.js', () => {
     // console.log("prism.min.js loaded");
   });
   loadScript('https://cdn.jsdelivr.net/npm/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js', () => {
     // console.log("prism-autoloader.min.js loaded");
-  });
-  loadScript('https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/toolbar/prism-toolbar.min.js', () => {
-    // console.log("prism-toolbar.min.js loaded");
-  });
-  loadScript('https://cdn.jsdelivr.net/npm/prismjs@1.14.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js', () => {
-    // console.log("prism-copy-to-clipboard.min.js loaded");
   });
 };
 

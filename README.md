@@ -13,7 +13,6 @@
     - [x] Vanilla JS
       - [YouTube](https://www.youtube.com/watch?v=j0qG-afD244&t=600s)
       - [freecodecamp](https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/)
-    - [x] Client-side-templates (htmx extension)
 
 ## TODO
 - [x] Implement Tailwind CLI
