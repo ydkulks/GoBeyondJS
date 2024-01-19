@@ -1,84 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBJ | Go</title>
-    <script src="../components/script.js"></script>
-    <link rel="stylesheet" href="../components/style.css">
-    <script src="../htmx.min.js"></script>
-    <link rel="stylesheet" href="../output.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBJ | Go</title>
+  <script src="../components/script.js"></script>
+  <link rel="stylesheet" href="../components/style.css">
+  <script src="../htmx.min.js"></script>
+  <link rel="stylesheet" href="../output.css">
+</head>
 
-  <body>
-    <script>prismJS();</script>
-    <nav-bar></nav-bar>
+<body>
+  <script>prismJS();</script>
+  <nav-bar></nav-bar>
 
-    <!-- <div class="flex justify-center"> -->
-    <div class="flex justify-center">
-      <div style="max-width: 768px;">
+  <!-- <div class="flex justify-center"> -->
+  <div class="flex justify-center">
+    <div style="max-width: 90%; word-wrap: break-word;">
 
-        <h2 class="text-2xl">Echo Framework</h2>
-        <p><a href="https://echo.labstack.com" class="underline hover:text-blue-600">Echo</a> is a web framework for building scalable and high-performance web applications in the 
+      <h2 class="text-3xl">Echo Framework</h2>
+      <p><a href="https://echo.labstack.com" class="underline hover:text-blue-600">Echo</a> is a web framework for
+        building scalable and high-performance web applications in the
         Go programming language</p>
-        <br>
+      <br>
 
-        <!-- Echo Basics -->
-        <h3 class="text-2xl">Echo Demo</h3>
-        <h2 class="text-1xl">Echo Installation</h2>
-        <pre style="line-height: 1;"><code style="line-height: 1;" class="language-bash" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">$ go get github.com/labstack/echo/v4</code></pre>
-        <br>
-        <h2 class="text-1xl">Basic Usage</h2>
-        <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">import 'github.com/labstack/echo/v4'
+      <!-- Echo Basics -->
+      <h3 class="text-2xl">Echo Demo</h3>
+      <h2 class="text-1xl">Echo Installation</h2>
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-bash" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">$ go get github.com/labstack/echo/v4</code></pre>
+      <br>
+      <h2 class="text-1xl">Basic Usage</h2>
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">import 'github.com/labstack/echo/v4'
 
 func main(){
   e:=echo.New()
   e.Logger.Fatal(e.Start(":8080"))
 }</code></pre>
-        <br><hr><br>
+      <br>
+      <hr><br>
 
-        <!-- Middleware -->
-        <h3 class="text-2xl">Middlewares</h3>
-        <p>Importing echo's middleware</p>
-        <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">import 'github.com/labstack/echo/v4/middleware'</code></pre>
-        <ul class="list-disc pl-4">
-          <li>
-            <h3 class="text-1xl">CORS</h3>
-          </li>
-        </ul>
-        <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">e.Use(middleware.CORS())</code></pre>
-        <ul class="list-disc pl-4">
-          <li>
-            <h3 class="text-1xl">Rate limiter</h3>
-          </li>
-        </ul>
-        <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy" data-prismjs-copy-success="Copied!">// Request limitaion: 1 per second
+      <!-- Middleware -->
+      <h3 class="text-2xl">Middlewares</h3>
+      <p>Importing echo's middleware</p>
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">import 'github.com/labstack/echo/v4/middleware'</code></pre>
+      <ul class="list-disc pl-4">
+        <li>
+          <h3 class="text-1xl">CORS</h3>
+        </li>
+      </ul>
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">e.Use(middleware.CORS())</code></pre>
+      <ul class="list-disc pl-4">
+        <li>
+          <h3 class="text-1xl">Rate limiter</h3>
+        </li>
+      </ul>
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">// Request limitaion: 1 per second
 e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(1)))</code></pre>
-        <br><hr><br>
+      <br>
+      <hr><br>
 
-        <!-- Go template -->
-        <h2 class="text-2xl">Go templates</h2>
-        <p><a href="https://pkg.go.dev/text/template" class="underline hover:text-blue-600">Go templates</a> 
+      <h3 class="text-2xl">Accessing Data from a request</h3>
+      <p>From: URL parameter, POST method, application/json, form-data</p>
+      <br>
+      <hr><br>
+
+      <!-- Go template -->
+      <h2 class="text-3xl">Go templates</h2>
+      <p><a href="https://pkg.go.dev/text/template" class="underline hover:text-blue-600">Go templates</a>
         implements data-driven templates for generating textual output.</p>
-        <br>
+      <br>
 
-        <h3 class="text-2xl">Go template Demo</h3>
-        <p>Click on 'Run' button to send a request to the server and get a HTML as a 
-        response generated by the <strong>Go template</strong> built-in library in 
-        golang that generates HTML respones based on the provided template and dynamic 
+      <h3 class="text-2xl">Go template Demo</h3>
+      <p>Click on 'Run' button to send a request to the server and get a HTML as a
+        response generated by the <strong>Go template</strong> built-in library in
+        golang that generates HTML respones based on the provided template and dynamic
         data passed to it.</p>
-        <br>
-        <button hx-get="http://localhost:8080/api/template/hello" hx-target="#goTemp"
+      <br>
+
+      <h4 class="text-1xl">Static Data</h3>
+        <span id="loading" class="htmx-indicator">Loading...</span>
+        <button hx-get="http://localhost:8080/api/template/hello" 
+          hx-trigger="click"
+          hx-indicator="#loading"
+          hx-swap="afterend"
           class="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 flex items-center gap-2">
           Run
         </button>
-        <div id="goTemp">[ Go template placeholder ]</div>
-        <br><hr><br>
+        <br>
 
-      </div>
+        <h4 class="text-1xl">Dynamic Data</h3>
+
+        <form>
+          <input
+          class="rounded-md text-sm font-medium border border-gray-200 h-10 px-4 py-2"
+          name="dynamicDataInput"
+          type="text" placeholder="Name"/>
+          <button
+            hx-post="http://localhost:8080/api/template/hello" 
+            hx-target="#goTempDynamic" 
+            hx-indicator="#loadingInput"
+            class="rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2">
+            Submit
+          </button>
+          <p class="htmx-indicator" id="loadingInput">Loading...</p>
+        </form>
+
+        <div id="goTempDynamic"></div>
+          <br>
+          <hr><br>
+
     </div>
+  </div>
 
-  </body>
+</body>
 
 </html>

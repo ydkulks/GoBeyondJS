@@ -48,10 +48,19 @@ func Api_endpoints(e *echo.Echo) {
   })
 
   // Templates
+  e.POST("/api/template/hello", func(c echo.Context) error {
+    params := c.FormValue("dynamicDataInput")
+    data := map[string]interface{}{
+      "name": params,
+    }
+    time.Sleep(3*time.Second)
+    return c.Render(http.StatusOK, "hello.html",data)
+  })
   e.GET("/api/template/hello", func(c echo.Context) error {
     data := map[string]interface{}{
       "name": "User",
     }
+    time.Sleep(3*time.Second)
     return c.Render(http.StatusOK, "hello.html",data)
   })
 

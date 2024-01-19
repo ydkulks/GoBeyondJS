@@ -16,7 +16,7 @@
     <nav-bar></nav-bar>
 
     <div class="flex justify-center">
-      <div style="max-width: 768px;">
+      <div style="max-width: 90%; word-wrap: break-word;">
       <!-- <div class="max-w-screen-md"> -->
 
         <h2 class="text-3xl">HTMX</h2>
@@ -45,15 +45,25 @@ crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
         <!-- Types of requests using HTMX -->
         <h3 class="text-2xl">HTMX AJAX Demo</h3>
         <p>Click on these buttons to issue different requests to the server:</p>
-        <button class="rounded-md px-3 py-1 bg-gray-100 hover:bg-gray-200" hx-target="#ajax-response"
+        <button 
+          class="rounded-md text-sm font-medium border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2"
+          hx-target="#ajax-response"
           hx-get="http://localhost:8080/api/hx-ajax">hx-get</button>
-        <button class="rounded-md px-3 py-1 bg-gray-100 hover:bg-gray-200" hx-target="#ajax-response"
+        <button 
+          class="rounded-md text-sm font-medium border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2"
+          hx-target="#ajax-response"
           hx-post="http://localhost:8080/api/hx-ajax">hx-post</button>
-        <button class="rounded-md px-3 py-1 bg-gray-100 hover:bg-gray-200" hx-target="#ajax-response"
+        <button 
+          class="rounded-md text-sm font-medium border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2"
+          hx-target="#ajax-response"
           hx-put="http://localhost:8080/api/hx-ajax">hx-put</button>
-        <button class="rounded-md px-3 py-1 bg-gray-100 hover:bg-gray-200" hx-target="#ajax-response"
+        <button 
+          class="rounded-md text-sm font-medium border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2"
+          hx-target="#ajax-response"
           hx-patch="http://localhost:8080/api/hx-ajax">hx-patch</button>
-        <button class="rounded-md px-3 py-1 bg-gray-100 hover:bg-gray-200" hx-target="#ajax-response"
+        <button 
+          class="rounded-md text-sm font-medium border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2"
+          hx-target="#ajax-response"
           hx-delete="http://localhost:8080/api/hx-ajax">hx-delete</button>
         <div id="ajax-response">[ Response ]</div>
         <br><hr><br>
