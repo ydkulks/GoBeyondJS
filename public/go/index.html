@@ -84,15 +84,15 @@ e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(1)))</code></p
       <br>
 
       <h4 class="text-1xl">Static Data</h3>
-        <span id="loading" class="htmx-indicator">Loading...</span>
+        <!-- <span id="loading" class="htmx-indicator">Loading...</span> -->
         <button hx-get="http://localhost:8080/api/template/hello" 
           hx-trigger="click"
-          hx-indicator="#loading"
+          hx-indicator="#loadingStatic"
           hx-swap="afterend"
           class="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 flex items-center gap-2">
           Run
         </button>
-        <br>
+        <span class="htmx-indicator" id="loadingStatic"><loading-svg></loading-svg></span>
 
         <h4 class="text-1xl">Dynamic Data</h3>
 
@@ -108,7 +108,7 @@ e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(1)))</code></p
             class="rounded-md text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border border-gray-200 bg-background hover:bg-gray-200 h-10 px-4 py-2 items-center gap-2">
             Submit
           </button>
-          <p class="htmx-indicator" id="loadingInput">Loading...</p>
+          <span class="htmx-indicator" id="loadingInput"><loading-svg></loading-svg></span>
         </form>
 
         <div id="goTempDynamic"></div>
