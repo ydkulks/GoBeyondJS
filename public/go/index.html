@@ -66,7 +66,18 @@ e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(1)))</code></p
       <hr><br>
 
       <h3 class="text-2xl">Accessing Data from a request</h3>
-      <p>From: URL parameter, POST method, application/json, form-data</p>
+      <!-- <p>From: URL parameter, POST method, application/json, form-data</p> -->
+      <pre style="line-height: 1;"><code style="line-height: 1;" class="language-go" data-prismjs-copy="Copy"
+          data-prismjs-copy-success="Copied!">// URL parameter and application/json
+e.GET("/api/end-point", func(c echo.Context) error {
+  param_value := c.QueryParam("param_name")
+}     
+
+// POST method and application/json
+e.POST("/api/end-point", func(c echo.Context) error {
+  formValue := c.FormValue("inputName")
+}
+      </code></pre>
       <br>
       <hr><br>
 
