@@ -88,6 +88,13 @@ func Api_endpoints(e *echo.Echo) {
     }
     return c.Render(http.StatusOK, "pooling.html",data)
   })
+  
+  e.POST("/api/file-upload", func(c echo.Context) error {
+    time.Sleep(3*time.Second)
+    // value1, value2 := c.FormFile("file")
+    // fmt.Println(value1, value2)
+    return c.String(http.StatusOK, "Uploaded")
+  })
 }
 
 func progress_me_daddy(prev int) int{

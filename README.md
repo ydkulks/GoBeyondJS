@@ -44,4 +44,4 @@ npm run dev
 
 ## TODO
 - [x] Implement Tailwind CLI
-- [ ] [File upload](https://htmx.org/examples/file-upload/)
+- [x] File upload
