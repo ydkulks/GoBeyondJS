@@ -605,10 +605,6 @@ video {
   max-width: 28rem;
 }
 
-.max-w-screen-md {
-  max-width: 768px;
-}
-
 .list-disc {
   list-style-type: disc;
 }
