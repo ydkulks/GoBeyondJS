@@ -5,10 +5,10 @@ class Nav extends HTMLElement{
   }
   connectedCallback() {
     this.innerHTML = `
-    <div class="flex justify-between m-5">
-      <h1 class="text-3xl font-bold">GoBeyondJS</h1>
+    <div class="flex justify-between mx-4">
+      <h1 class="text-xl font-bold">GoBeyondJS</h1>
       <nav id="navbar">
-         <ul class="flex space-x-7 "hx-boost="true">
+         <ul class="flex gap-4"hx-boost="true">
           <li class="hover:underline rounded-md"><a href="/">Home</a></li>
           <li class="hover:underline rounded-md"><a href="/htmx">HTMX</a></li>
           <li class="hover:underline rounded-md"><a href="/go">Go</a></li>
